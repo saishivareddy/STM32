@@ -19,8 +19,10 @@
 #include "usart.h"
 
 #include "main.h"
+
+#include "ssd1306.h"
 /* Example application name and version to display on LCD screen. */
-#define APP_NAME "SIMPLE TX v1.2"
+char buff[] = "SIMPLE TX v1.2";
 
 /* Default communication configuration. We use here EVK1000's default mode (mode 3). */
 static dwt_config_t config = {
@@ -55,7 +57,7 @@ int dw_main(void)
 {
     /* Display application name on LCD. */
 //dwt
-
+	ssd1306_write(buff, Font_7x10);
     /* Reset and initialise DW1000. See NOTE 2 below.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -64,6 +66,8 @@ int dw_main(void)
     if (dwt_initialise(DWT_LOADNONE) == DWT_ERROR)
     {
         printf("INIT FAILED");
+        SSD1306_GotoXY(0, 10); SSD1306_InvertDisplay(1);
+        ssd1306_write("Init Failed!!!", Font_7x10);
         while (1)
         { };
     }
@@ -75,6 +79,8 @@ int dw_main(void)
     /* Loop forever sending frames periodically. */
     while(1)
     {
+    	SSD1306_GotoXY(0, 10);
+    	ssd1306_write("Transmitted : ", Font_7x10);
         /* Write frame data to DW1000 and prepare transmission. See NOTE 4 below.*/
         dwt_writetxdata(sizeof(tx_msg), tx_msg, 0); /* Zero offset in TX buffer. */
         dwt_writetxfctrl(sizeof(tx_msg), 0, 0); /* Zero offset in TX buffer, no ranging. */
@@ -82,11 +88,13 @@ int dw_main(void)
         /* Start transmission. */
         dwt_starttx(DWT_START_TX_IMMEDIATE);
 
+        SSD1306_GotoXY(0,  30);
+        ssd1306_write(tx_msg, Font_7x10);
         /* Poll DW1000 until TX frame sent event set. See NOTE 5 below.
          * STATUS register is 5 bytes long but, as the event we are looking at is in the first byte of the register, we can use this simplest API
          * function to access it.*/
-//        while (!(dwt_read32bitreg(SYS_STATUS_ID) & SYS_STATUS_TXFRS))
-//        { };
+        while (!(dwt_read32bitreg(SYS_STATUS_ID) & SYS_STATUS_TXFRS))
+        { };
 
         /* Clear TX frame sent event. */
         dwt_write32bitreg(SYS_STATUS_ID, SYS_STATUS_TXFRS);
@@ -94,6 +102,7 @@ int dw_main(void)
         /* Execute a delay between transmissions. */
         Sleep(TX_DELAY_MS);
         HAL_UART_Transmit(&huart2, tx_msg, sizeof(tx_msg), HAL_MAX_DELAY);
+
         /* Increment the blink frame sequence number (modulo 256). */
         tx_msg[BLINK_FRAME_SN_IDX]++;
 

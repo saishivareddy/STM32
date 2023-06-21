@@ -1522,3 +1522,32 @@ java.lang.Exception: Project 'lora-test' is not open.
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-06-21 10:31:49.871
 !MESSAGE Indexed 'dwm1000- f411re' (37 sources, 122 headers) in 2.42 sec: 10,244 declarations; 40,001 references; 2 unresolved inclusions; 42 syntax errors; 148 unresolved names (0.29%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2023-06-21 10:45:34.935
+!MESSAGE Program file does not exist
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2023-06-21 10:45:34.935
+!MESSAGE 
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Release/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Libraries}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Release/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Program}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Release/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Libraries}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Release/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Program}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Libraries}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Program}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.380
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Libraries}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2023-06-21 10:46:50.395
+!MESSAGE Failed to check relative, returning possibly relative path: C:\Users\HP\Documents\git\STM32\dwm1000- f411re\Debug/"" literal was "${workspace_loc:/${ProjName}/Core/Inc/Program}"
