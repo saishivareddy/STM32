@@ -17,22 +17,22 @@
 #include "port.h"
 #include "stdio.h"
 #include "usart.h"
-
+#include "ssd1306.h"
 #include "main.h"
 /* Example application name and version to display on LCD screen. */
-#define APP_NAME "SIMPLE TX v1.2"
+char buff[]= "SIMPLE TX v1.2";
 
 /* Default communication configuration. We use here EVK1000's default mode (mode 3). */
 static dwt_config_t config = {
-    2,               /* Channel number. */
+    5,               /* Channel number. */
     DWT_PRF_64M,     /* Pulse repetition frequency. */
     DWT_PLEN_1024,   /* Preamble length. Used in TX only. */
     DWT_PAC32,       /* Preamble acquisition chunk size. Used in RX only. */
     9,               /* TX preamble code. Used in TX only. */
     9,               /* RX preamble code. Used in RX only. */
     1,               /* 0 to use standard SFD, 1 to use non-standard SFD. */
-    DWT_BR_110K,     /* Data rate. */
-    DWT_PHRMODE_STD, /* PHY header mode. */
+	DWT_BR_6M8,     /* Data rate. */
+	DWT_PHRMODE_EXT, /* PHY header mode. */
     (1025 + 64 - 32) /* SFD timeout (preamble length + 1 + SFD length - PAC size). Used in RX only. */
 };
 
@@ -55,7 +55,7 @@ int dw_main(void)
 {
     /* Display application name on LCD. */
 //dwt
-
+	ssd1306_write(buff, Font_7x10);
     /* Reset and initialise DW1000. See NOTE 2 below.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -64,6 +64,7 @@ int dw_main(void)
     if (dwt_initialise(DWT_LOADNONE) == DWT_ERROR)
     {
         printf("INIT FAILED");
+        ssd1306_write("Init Failed", Font_11x18);
         while (1)
         { };
     }
@@ -75,6 +76,7 @@ int dw_main(void)
     /* Loop forever sending frames periodically. */
     while(1)
     {
+
         /* Write frame data to DW1000 and prepare transmission. See NOTE 4 below.*/
         dwt_writetxdata(sizeof(tx_msg), tx_msg, 0); /* Zero offset in TX buffer. */
         dwt_writetxfctrl(sizeof(tx_msg), 0, 0); /* Zero offset in TX buffer, no ranging. */
@@ -94,6 +96,8 @@ int dw_main(void)
         /* Execute a delay between transmissions. */
         Sleep(TX_DELAY_MS);
         HAL_UART_Transmit(&huart2, tx_msg, sizeof(tx_msg), HAL_MAX_DELAY);
+        SSD1306_GotoXY(0, 10); ssd1306_write("Transmitted :", Font_7x10);
+        SSD1306_GotoXY(0,30); ssd1306_write(tx_msg, Font_7x10);
         /* Increment the blink frame sequence number (modulo 256). */
         tx_msg[BLINK_FRAME_SN_IDX]++;
 

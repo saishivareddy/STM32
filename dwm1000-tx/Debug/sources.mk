@@ -22,6 +22,7 @@ OBJCOPY_BIN :=
 SUBDIRS := \
 Core/Inc/decadriver \
 Core/Inc/platform \
+Core/Inc/ssd1306 \
 Core/Src \
 Core/Startup \
 Drivers/STM32L1xx_HAL_Driver/Src \

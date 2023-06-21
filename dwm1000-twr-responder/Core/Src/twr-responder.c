@@ -27,8 +27,10 @@
 #include "deca_spi.h"
 #include "port.h"
 #include "usart.h"
+#include "ssd1306.h"
+
 /* Example application name and version to display on LCD screen. */
-#define APP_NAME "DS TWR RESP v1.2"
+char buff[]= "DS TWR RESP v1.2";
 
 /* Default communication configuration. We use here EVK1000's default mode (mode 3). */
 static dwt_config_t config = {
@@ -121,8 +123,8 @@ static void final_msg_get_ts(const uint8 *ts_field, uint32 *ts);
 int dw_main(void)
 {
     /* Display application name on LCD. */
-    printf(APP_NAME);
-
+//    printf(APP_NAME);
+    ssd1306_write(buff, Font_7x10);
     /* Reset and initialise DW1000.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -131,6 +133,8 @@ int dw_main(void)
     if (dwt_initialise(DWT_LOADUCODE) == DWT_ERROR)
     {
         printf("INIT FAILED");
+        SSD1306_GotoXY(0, 10); SSD1306_InvertDisplay(1);
+        ssd1306_write("Init Failed!!!",Font_7x10);
         while (1)
         { };
     }
@@ -149,6 +153,9 @@ int dw_main(void)
     /* Loop forever responding to ranging requests. */
     while (1)
     {
+    	SSD1306_Clear();
+    	SSD1306_GotoXY(0,0);  ssd1306_write("Received :", Font_7x10);
+    	SSD1306_GotoXY(0,20); ssd1306_write("Transmitted : ", Font_7x10);
         /* Clear reception timeout to start next ranging process. */
         dwt_setrxtimeout(0);
 
@@ -172,7 +179,8 @@ int dw_main(void)
             {
                 dwt_readrxdata(rx_buffer, frame_len, 0);
             }
-
+            SSD1306_GotoXY(0,10);  ssd1306_write(rx_buffer, Font_7x10);
+            HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
             /* Check that the frame is a poll sent by "DS TWR initiator" example.
              * As the sequence number field of the frame is not relevant, it is cleared to simplify the validation of the frame. */
             rx_buffer[ALL_MSG_SN_IDX] = 0;
@@ -197,7 +205,8 @@ int dw_main(void)
                 dwt_writetxdata(sizeof(tx_resp_msg), tx_resp_msg, 0); /* Zero offset in TX buffer. */
                 dwt_writetxfctrl(sizeof(tx_resp_msg), 0, 1); /* Zero offset in TX buffer, ranging. */
                 ret = dwt_starttx(DWT_START_TX_DELAYED | DWT_RESPONSE_EXPECTED);
-
+                HAL_UART_Transmit(&huart2, tx_resp_msg, sizeof(tx_resp_msg), HAL_MAX_DELAY);
+                SSD1306_GotoXY(0,30);  ssd1306_write(tx_resp_msg, Font_7x10);
                 /* If dwt_starttx() returns an error, abandon this ranging exchange and proceed to the next one. See NOTE 11 below. */
                 if (ret == DWT_ERROR)
                 {

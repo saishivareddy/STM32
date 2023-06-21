@@ -91,7 +91,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   setup_DW1000RSTnIRQ(0);
-
+SSD1306_Init();
     dw_main();
   /* USER CODE END 2 */
 

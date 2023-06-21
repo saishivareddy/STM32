@@ -189,7 +189,7 @@ void ssd1306_Fill(SSD1306_COLOR color) {
 
 // Write the screen buffer with changed to the screen
 void ssd1306_UpdateScreen(void) {
-//	send_uart("Enter update \n\r");
+	// send_uart("Enter update \n\r");
 	// Write data to each page of RAM. Number of pages
 	// depends on the screen height:
 	//

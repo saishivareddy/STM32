@@ -17,17 +17,20 @@
  *
  * @author Decawave
  */
-
+//#ifdef EX_05A_DEF
 #include <string.h>
 
 #include "deca_device_api.h"
 #include "deca_regs.h"
 //#include "lcd.h"
+
 #include "deca_spi.h"
 #include "port.h"
 #include "usart.h"
+
+#include "ssd1306.h"
 /* Example application name and version to display on LCD screen. */
-#define APP_NAME "DS TWR INIT v1.2"
+char buff[]= "DS TWR INIT v1.2";
 
 /* Inter-ranging delay period, in milliseconds. */
 #define RNG_DELAY_MS 1000
@@ -112,8 +115,8 @@ static void final_msg_set_ts(uint8 *ts_field, uint64 ts);
 int dw_main(void)
 {
     /* Display application name on LCD. */
-    printf(APP_NAME);
-
+//    lcd_display_str(APP_NAME);
+	ssd1306_write(buff, Font_7x10);
     /* Reset and initialise DW1000.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -121,7 +124,10 @@ int dw_main(void)
     port_set_dw1000_slowrate();
     if (dwt_initialise(DWT_LOADUCODE) == DWT_ERROR)
     {
-        printf("INIT FAILED");
+//        lcd_display_str("INIT FAILED");
+    	HAL_UART_Transmit(&huart2, "Init Failed\n", 12, 100);
+    	SSD1306_GotoXY(0 ,10); SSD1306_InvertDisplay(1);
+    	ssd1306_write("Init Failed!!!", Font_7x10);
         while (1)
         { };
     }
@@ -143,6 +149,11 @@ int dw_main(void)
     /* Loop forever initiating ranging exchanges. */
     while (1)
     {
+
+    	SSD1306_Clear ();
+    	SSD1306_GotoXY(0, 0);  ssd1306_write("Transmitted :", Font_7x10);
+    	SSD1306_GotoXY(0, 20);  ssd1306_write("Received :", Font_7x10);
+
         /* Write frame data to DW1000 and prepare transmission. See NOTE 8 below. */
         tx_poll_msg[ALL_MSG_SN_IDX] = frame_seq_nb;
         dwt_writetxdata(sizeof(tx_poll_msg), tx_poll_msg, 0); /* Zero offset in TX buffer. */
@@ -151,7 +162,8 @@ int dw_main(void)
         /* Start transmission, indicating that a response is expected so that reception is enabled automatically after the frame is sent and the delay
          * set by dwt_setrxaftertxdelay() has elapsed. */
         dwt_starttx(DWT_START_TX_IMMEDIATE | DWT_RESPONSE_EXPECTED);
-        HAL_UART_Transmit(&huart2, tx_poll_msg,sizeof(tx_poll_msg), HAL_MAX_DELAY);
+        HAL_UART_Transmit(&huart2, tx_poll_msg, sizeof(tx_poll_msg), 100);
+        SSD1306_GotoXY(0, 10); ssd1306_write(tx_poll_msg, Font_7x10);
         /* We assume that the transmission is achieved correctly, poll for reception of a frame or error/timeout. See NOTE 9 below. */
         while (!((status_reg = dwt_read32bitreg(SYS_STATUS_ID)) & (SYS_STATUS_RXFCG | SYS_STATUS_ALL_RX_TO | SYS_STATUS_ALL_RX_ERR)))
         { };
@@ -172,7 +184,8 @@ int dw_main(void)
             {
                 dwt_readrxdata(rx_buffer, frame_len, 0);
             }
-            HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
+            HAL_UART_Transmit(&huart2,rx_buffer , sizeof(rx_buffer), 100);
+            SSD1306_GotoXY(0, 30); ssd1306_write(rx_buffer, Font_7x10);
             /* Check that the frame is the expected response from the companion "DS TWR responder" example.
              * As the sequence number field of the frame is not relevant, it is cleared to simplify the validation of the frame. */
             rx_buffer[ALL_MSG_SN_IDX] = 0;
@@ -202,7 +215,10 @@ int dw_main(void)
                 dwt_writetxdata(sizeof(tx_final_msg), tx_final_msg, 0); /* Zero offset in TX buffer. */
                 dwt_writetxfctrl(sizeof(tx_final_msg), 0, 1); /* Zero offset in TX buffer, ranging. */
                 ret = dwt_starttx(DWT_START_TX_DELAYED);
-                HAL_UART_Transmit(&huart2, tx_final_msg, sizeof(tx_final_msg), HAL_MAX_DELAY);
+
+                HAL_UART_Transmit(&huart2,tx_final_msg , sizeof(tx_final_msg), 100);
+                SSD1306_GotoXY(0, 40); ssd1306_write("Final Msg :", Font_7x10);
+                SSD1306_GotoXY(0, 50); ssd1306_write(tx_final_msg, Font_7x10);
                 /* If dwt_starttx() returns an error, abandon this ranging exchange and proceed to the next one. See NOTE 12 below. */
                 if (ret == DWT_SUCCESS)
                 {
@@ -300,7 +316,7 @@ static void final_msg_set_ts(uint8 *ts_field, uint64 ts)
         ts >>= 8;
     }
 }
-
+//#endif
 /*****************************************************************************************************************************************************
  * NOTES:
  *

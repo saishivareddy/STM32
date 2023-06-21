@@ -19,8 +19,10 @@
 #include "stdio.h"
 #include "usart.h"
 #include "main.h"
+
+#include "ssd1306.h"
 /* Example application name and version to display on LCD screen. */
-#define APP_NAME "SIMPLE RX v1.2"
+char buff[] = "SIMPLE RX v1.2";
 
 /* Default communication configuration. We use here EVK1000's default mode (mode 3). */
 static dwt_config_t config = {
@@ -52,7 +54,7 @@ static uint16 frame_len = 0;
 int dw_main(void)
 {
     /* Display application name on LCD. */
-    printf(APP_NAME);
+    ssd1306_write(buff, Font_7x10);
 
     /* Reset and initialise DW1000. See NOTE 2 below.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
@@ -62,6 +64,8 @@ int dw_main(void)
     if (dwt_initialise(DWT_LOADNONE) == DWT_ERROR)
     {
         printf("INIT FAILED");
+        SSD1306_GotoXY(0, 10); SSD1306_InvertDisplay(1);
+        ssd1306_write("Init Failed!!!", Font_7x10);
         while (1)
         { };
     }
@@ -73,6 +77,7 @@ int dw_main(void)
     /* Loop forever receiving frames. */
     while (1)
     {
+
         int i;
 
         /* TESTING BREAKPOINT LOCATION #1 */
@@ -103,10 +108,12 @@ int dw_main(void)
             {
                 dwt_readrxdata(rx_buffer, frame_len, 0);
             }
-
+            SSD1306_GotoXY(0, 30);
+            ssd1306_write(rx_buffer, Font_7x10);
+            HAL_UART_Transmit(&huart2, rx_buffer, 10, HAL_MAX_DELAY);
             /* Clear good RX frame event in the DW1000 status register. */
             dwt_write32bitreg(SYS_STATUS_ID, SYS_STATUS_RXFCG);
-            HAL_UART_Transmit(&huart2, rx_buffer, 10, HAL_MAX_DELAY);
+
         }
         else
         {
