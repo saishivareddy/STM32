@@ -1,0 +1,10 @@
+12:06:33 **** Incremental Build of configuration Debug for project dwm1000- f411re-twr-resp ****
+make -j16 all 
+arm-none-eabi-size   dwm1000-\ f411re-twr-resp.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49924	    592	   3008	  53524	   d114	dwm1000- f411re-twr-resp.elf
+Finished building: default.size.stdout
+ 
+
+12:06:33 Build Finished. 0 errors, 0 warnings. (took 220ms)
+

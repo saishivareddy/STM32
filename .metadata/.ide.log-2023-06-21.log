@@ -1,0 +1,5 @@
+2023-06-22 10:22:53,899 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2023-06-22 15:09:04,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.atollic.truestudio.general.runtimelib.594694208 uses a null category that is invalid in its context. The option was ignored.
+2023-06-22 15:09:04,319 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.atollic.truestudio.general.runtimelib.594694208 uses a null category that is invalid in its context. The option was ignored.
+2023-06-22 15:09:58,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.atollic.truestudio.general.runtimelib.594694208 uses a null category that is invalid in its context. The option was ignored.
+2023-06-22 15:10:35,263 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.atollic.truestudio.general.runtimelib.594694208 uses a null category that is invalid in its context. The option was ignored.

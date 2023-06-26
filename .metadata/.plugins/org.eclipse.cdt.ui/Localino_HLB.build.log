@@ -1,0 +1,364 @@
+12:03:09 **** Build of configuration Debug for project Localino_HLB ****
+make -j16 all 
+arm-none-eabi-gcc -c -mcpu=cortex-m3 -g3 -c -Wa,-W -x assembler-with-cpp -MMD -MP -MF"startup/startup_stm32f103xb.d" -MT"startup/startup_stm32f103xb.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "startup/startup_stm32f103xb.o" "../startup/startup_stm32f103xb.s"
+arm-none-eabi-gcc -c "../Src/deca_mutex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/deca_mutex.d" -MT"Src/deca_mutex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/deca_mutex.o"
+arm-none-eabi-gcc -c "../Src/deca_sleep.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/deca_sleep.d" -MT"Src/deca_sleep.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/deca_sleep.o"
+arm-none-eabi-gcc -c "../Src/dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/dma.d" -MT"Src/dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/dma.o"
+arm-none-eabi-gcc -c "../Src/ds_twr_init.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ds_twr_init.d" -MT"Src/ds_twr_init.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ds_twr_init.o"
+arm-none-eabi-gcc -c "../Src/ds_twr_resp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ds_twr_resp.d" -MT"Src/ds_twr_resp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ds_twr_resp.o"
+arm-none-eabi-gcc -c "../Src/ds_twr_simplerx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ds_twr_simplerx.d" -MT"Src/ds_twr_simplerx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ds_twr_simplerx.o"
+arm-none-eabi-gcc -c "../Src/ds_twr_simpletx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ds_twr_simpletx.d" -MT"Src/ds_twr_simpletx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/ds_twr_simpletx.o"
+arm-none-eabi-gcc -c "../Src/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc -c "../Src/iwdg.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/iwdg.d" -MT"Src/iwdg.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/iwdg.o"
+arm-none-eabi-gcc -c "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -c "../Src/spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/spi.o"
+arm-none-eabi-gcc -c "../Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f1xx_it.d" -MT"Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/stm32f1xx_it.o"
+arm-none-eabi-gcc -c "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+In file included from ../Inc/main.h:46,
+                 from ../Src/deca_sleep.c:16:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -c "../Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f1xx.d" -MT"Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/system_stm32f1xx.o"
+In file included from ../Inc/main.h:46,
+                 from ../Inc/dma.h:49,
+                 from ../Src/dma.c:40:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+In file included from ../Inc/main.h:46,
+                 from ../Src/deca_mutex.c:14:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -c "../Src/usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/usart.d" -MT"Src/usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/usart.o"
+arm-none-eabi-gcc -c "../Drivers/decadriver/deca_device.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/decadriver/deca_device.d" -MT"Drivers/decadriver/deca_device.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/decadriver/deca_device.o"
+In file included from ../Inc/main.h:46,
+                 from ../Src/ds_twr_init.c:16:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Src/ds_twr_simplerx.c:15:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Src/ds_twr_simpletx.c:15:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/iwdg.h:47,
+                 from ../Src/iwdg.c:41:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Inc/gpio.h:52,
+                 from ../Src/gpio.c:41:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Src/main.c:40:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Src/ds_twr_resp.c:16:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Inc/spi.h:48,
+                 from ../Src/spi.c:41:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Inc/stm32f1xx_it.h:47,
+                 from ../Src/stm32f1xx_it.c:35:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Src/main.c: In function '_Error_Handler':
+../Src/main.c:311:27: warning: unused parameter 'file' [-Wunused-parameter]
+  311 | void _Error_Handler(char *file, int line)
+      |                     ~~~~~~^~~~
+../Src/main.c:311:37: warning: unused parameter 'line' [-Wunused-parameter]
+  311 | void _Error_Handler(char *file, int line)
+      |                                 ~~~~^~~~
+../Src/main.c: In function 'assert_failed':
+../Src/main.c:329:29: warning: unused parameter 'file' [-Wunused-parameter]
+  329 | void assert_failed(uint8_t* file, uint32_t line)
+      |                    ~~~~~~~~~^~~~
+../Src/main.c:329:44: warning: unused parameter 'line' [-Wunused-parameter]
+  329 | void assert_failed(uint8_t* file, uint32_t line)
+      |                                   ~~~~~~~~~^~~~
+In file included from ../Inc/main.h:46,
+                 from ../Inc/spi.h:48,
+                 from ../Drivers/decadriver/deca_device.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+In file included from ../Inc/main.h:46,
+                 from ../Src/syscalls.c:16:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+In file included from ../Inc/main.h:46,
+                 from ../Inc/usart.h:58,
+                 from ../Src/usart.c:41:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_Enable':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:160:51: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  160 | __STATIC_INLINE void LL_IWDG_Enable(IWDG_TypeDef *IWDGx)
+      |                                     ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_ReloadCounter':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:171:58: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  171 | __STATIC_INLINE void LL_IWDG_ReloadCounter(IWDG_TypeDef *IWDGx)
+      |                                            ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_EnableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:182:62: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  182 | __STATIC_INLINE void LL_IWDG_EnableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h: In function 'LL_IWDG_DisableWriteAccess':
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_iwdg.h:193:63: warning: unused parameter 'IWDGx' [-Wunused-parameter]
+  193 | __STATIC_INLINE void LL_IWDG_DisableWriteAccess(IWDG_TypeDef *IWDGx)
+      |                                                 ~~~~~~~~~~~~~~^~~~~
+../Src/syscalls.c: In function '_write':
+../Src/syscalls.c:22:31: warning: comparison of integer expressions of different signedness: 'int' and 'size_t' {aka 'unsigned int'} [-Wsign-compare]
+   22 |     for (DataIdx = 0; DataIdx < len; DataIdx++)
+      |                               ^
+../Src/syscalls.c:18:16: warning: unused parameter 'fd' [-Wunused-parameter]
+   18 | int _write(int fd, char *ptr, size_t len)
+      |            ~~~~^~
+../Src/syscalls.c: In function '_exit':
+../Src/syscalls.c:30:16: warning: unused parameter 'status' [-Wunused-parameter]
+   30 | void _exit(int status)
+      |            ~~~~^~~~~~
+../Src/syscalls.c: In function '_close_r':
+../Src/syscalls.c:38:18: warning: unused parameter 'file' [-Wunused-parameter]
+   38 | int _close_r(int file)
+      |              ~~~~^~~~
+../Src/syscalls.c: In function '_lseek_r':
+../Src/syscalls.c:48:18: warning: unused parameter 'file' [-Wunused-parameter]
+   48 | int _lseek_r(int file, int ptr, int dir)
+      |              ~~~~^~~~
+../Src/syscalls.c:48:28: warning: unused parameter 'ptr' [-Wunused-parameter]
+   48 | int _lseek_r(int file, int ptr, int dir)
+      |                        ~~~~^~~
+../Src/syscalls.c:48:37: warning: unused parameter 'dir' [-Wunused-parameter]
+   48 | int _lseek_r(int file, int ptr, int dir)
+      |                                 ~~~~^~~
+../Src/syscalls.c: In function '_kill_r':
+../Src/syscalls.c:53:17: warning: unused parameter 'pid' [-Wunused-parameter]
+   53 | int _kill_r(int pid, int sig)
+      |             ~~~~^~~
+../Src/syscalls.c:53:26: warning: unused parameter 'sig' [-Wunused-parameter]
+   53 | int _kill_r(int pid, int sig)
+      |                      ~~~~^~~
+arm-none-eabi-gcc -c "../Drivers/decadriver/deca_params_init.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/decadriver/deca_params_init.d" -MT"Drivers/decadriver/deca_params_init.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/decadriver/deca_params_init.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_dma.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_exti.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_gpio.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_pwr.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_rcc.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_spi.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_usart.o"
+arm-none-eabi-gcc -c "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_FULL_LL_DRIVER '-D__weak=__attribute__((weak))' '-D__packed="__attribute__((__packed__))"' -DSTM32F103xB -c -I../Inc -I"C:/Users/HP/Downloads/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Localino-STM32-03bb766a242e62f6fbc2276242b5e66b8cfd1c36/Drivers/decadriver" -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -Wextra -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_utils.o"
+arm-none-eabi-gcc -o "Localino_HLB.elf" @"objects.list"   -mcpu=cortex-m3 -T"../STM32F103CB_FLASH.ld" --specs=nosys.specs -Wl,-Map="Localino_HLB.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Localino_HLB.elf
+ 
+arm-none-eabi-size   Localino_HLB.elf 
+arm-none-eabi-objdump -h -S  Localino_HLB.elf  > "Localino_HLB.list"
+   text	   data	    bss	    dec	    hex	filename
+  22296	    552	   2400	  25248	   62a0	Localino_HLB.elf
+Finished building: default.size.stdout
+ 
+Finished building: Localino_HLB.list
+ 
+
+12:03:12 Build Finished. 0 errors, 73 warnings. (took 2s.722ms)
+

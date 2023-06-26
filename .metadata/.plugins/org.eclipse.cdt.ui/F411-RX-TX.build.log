@@ -1,0 +1,10 @@
+11:56:18 **** Incremental Build of configuration Debug for project F411-RX-TX ****
+make -j16 all 
+arm-none-eabi-size   F411-RX-TX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30692	    188	   3052	  33932	   848c	F411-RX-TX.elf
+Finished building: default.size.stdout
+ 
+
+11:56:18 Build Finished. 0 errors, 0 warnings. (took 219ms)
+
