@@ -1,0 +1,30 @@
+12:32:57 **** Incremental Build of configuration Debug for project dwm300-f411-tx ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm300-f411-tx/Core/Inc/dwt_uwb_driver" -I"C:/Users/HP/Documents/git/STM32/dwm300-f411-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm300-f411-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm300-f411-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm300-f411-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+../Core/Src/stm32f4xx_it.c: In function 'HardFault_Handler':
+../Core/Src/stm32f4xx_it.c:89:28: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   89 |  HAL_UART_Transmit(&huart2,"Hard Fault!!!", 15, 100);
+      |                            ^~~~~~~~~~~~~~~
+      |                            |
+      |                            char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/stm32f4xx_it.c:21:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:722:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  722 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "dwm300-f411-tx.elf" @"objects.list"  -Wl,--start-group  -Wl,--end-group -mcpu=cortex-m4 -T"C:\Users\HP\Documents\git\STM32\dwm300-f411-tx\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm300-f411-tx.map" -Wl,--gc-sections -static -L"C:\Users\HP\Documents\git\STM32\dwm300-f411-tx\Core\Inc\dwt_uwb_driver\lib" -Wl,--whole-archive -ldwt_uwb_driver-m4-hfp-6.0.7 -Wl,--no-whole-archive --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dwm300-f411-tx.elf
+ 
+arm-none-eabi-size   dwm300-f411-tx.elf 
+arm-none-eabi-objdump -h -S  dwm300-f411-tx.elf  > "dwm300-f411-tx.list"
+   text	   data	    bss	    dec	    hex	filename
+  79272	    164	   1924	  81360	  13dd0	dwm300-f411-tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: dwm300-f411-tx.list
+ 
+
+12:32:58 Build Finished. 0 errors, 1 warnings. (took 906ms)
+

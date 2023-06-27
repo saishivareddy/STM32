@@ -100,8 +100,9 @@ int main(void)
   port_DisableEXT_IRQ();
   Sleep(5000);
   setup_DWICRSTnIRQ(0);
-  /* USER CODE END 2 */
   simple_tx();
+  /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

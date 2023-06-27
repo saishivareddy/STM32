@@ -35,15 +35,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  15 .debug_macro  00019950  00000000  00000000  00059380  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_line   00019f19  00000000  00000000  00072cd0  2**0
+ 16 .debug_line   00019f99  00000000  00000000  00072cd0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_str    0008dc67  00000000  00000000  0008cbe9  2**0
+ 17 .debug_str    0008dc6f  00000000  00000000  0008cc69  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .comment      000000cf  00000000  00000000  0011a850  2**0
+ 18 .comment      000000cf  00000000  00000000  0011a8d8  2**0
                   CONTENTS, READONLY
- 19 .debug_ranges 00001088  00000000  00000000  0011a920  2**3
+ 19 .debug_ranges 00001088  00000000  00000000  0011a9a8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00004b14  00000000  00000000  0011b9a8  2**2
+ 20 .debug_frame  00004b14  00000000  00000000  0011ba30  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -4073,9 +4073,10 @@ int main(void)
   setup_DWICRSTnIRQ(0);
  8001c64:	2000      	movs	r0, #0
  8001c66:	f7ff f99b 	bl	8000fa0 <setup_DWICRSTnIRQ>
-  /* USER CODE END 2 */
   simple_tx();
  8001c6a:	f000 f855 	bl	8001d18 <simple_tx>
+  /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

@@ -63,8 +63,8 @@ all: main-build
 main-build: dwm3000-tx.elf secondary-outputs
 
 # Tool invocations
-dwm3000-tx.elf dwm3000-tx.map: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\git\STM32\dwm3000-tx\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "dwm3000-tx.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m3 -T"C:\Users\HP\Documents\git\STM32\dwm3000-tx\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-tx.map" -static -L"C:\Users\HP\Documents\git\STM32\dwm3000-tx\Core\Inc\dwt_uwb_driver\lib" -Wl,--whole-archive -ldwt_uwb_driver-m4-sfp-6.0.7 -Wl,--no-whole-archive --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+dwm3000-tx.elf dwm3000-tx.map: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-tx\STM32L152RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "dwm3000-tx.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m3 -T"C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-tx\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-tx.map" -static -L"C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-tx\Core\Inc\dwt_uwb_driver\lib" -Wl,--whole-archive -ldwt_uwb_driver-m4-sfp-6.0.7 -Wl,--no-whole-archive --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
