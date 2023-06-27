@@ -1,4 +1,4 @@
-11:36:01 **** Build of configuration Debug for project dwm3000-tx ****
+10:15:39 **** Build of configuration Debug for project dwm3000-tx ****
 make -j16 all 
 arm-none-eabi-gcc "../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.d" -MT"Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o"
 arm-none-eabi-gcc "../Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.d" -MT"Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o"
@@ -35,22 +35,59 @@ arm-none-eabi-gcc "../Core/Inc/platform/deca_mutex.c" -mcpu=cortex-m3 -std=gnu11
 ../Core/Src/main.c:104:3: warning: implicit declaration of function 'simple_tx' [-Wimplicit-function-declaration]
   104 |   simple_tx();
       |   ^~~~~~~~~
+arm-none-eabi-gcc "../Core/Inc/platform/deca_probe_interface.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/platform/deca_probe_interface.d" -MT"Core/Inc/platform/deca_probe_interface.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/platform/deca_probe_interface.o"
 ../Core/Src/simple_tx.c: In function 'simple_tx':
+../Core/Src/simple_tx.c:92:33: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+   92 |      HAL_UART_Transmit(&huart2, "Init Failed!!!", 15, HAL_MAX_DELAY);
+      |                                 ^~~~~~~~~~~~~~~~
+      |                                 |
+      |                                 char *
+In file included from ../Core/Inc/stm32l1xx_hal_conf.h:269,
+                 from ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:29,
+                 from C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform/port.h:25,
+                 from ../Core/Src/simple_tx.c:18:
+../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/simple_tx.c:104:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  104 |         HAL_UART_Transmit(&huart2, "Config Failed!!!", 16, HAL_MAX_DELAY);
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32l1xx_hal_conf.h:269,
+                 from ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:29,
+                 from C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform/port.h:25,
+                 from ../Core/Src/simple_tx.c:18:
+../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+../Core/Src/simple_tx.c:135:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  135 |         HAL_UART_Transmit(&huart2, "TX Frame Sent😊", 15, HAL_MAX_DELAY);
+      |                                    ^~~~~~~~~~~~~~~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32l1xx_hal_conf.h:269,
+                 from ../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal.h:29,
+                 from C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform/port.h:25,
+                 from ../Core/Src/simple_tx.c:18:
+../Drivers/STM32L1xx_HAL_Driver/Inc/stm32l1xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
 ../Core/Src/simple_tx.c:69:14: warning: variable 'dev_id' set but not used [-Wunused-but-set-variable]
    69 |     uint32_t dev_id;
       |              ^~~~~~
-arm-none-eabi-gcc "../Core/Inc/platform/deca_probe_interface.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/platform/deca_probe_interface.d" -MT"Core/Inc/platform/deca_probe_interface.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/platform/deca_probe_interface.o"
 arm-none-eabi-gcc "../Core/Inc/platform/deca_sleep.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/platform/deca_sleep.d" -MT"Core/Inc/platform/deca_sleep.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/platform/deca_sleep.o"
 arm-none-eabi-gcc "../Core/Inc/platform/deca_spi.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/platform/deca_spi.d" -MT"Core/Inc/platform/deca_spi.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/platform/deca_spi.o"
 arm-none-eabi-gcc "../Core/Inc/platform/port.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/platform/port.d" -MT"Core/Inc/platform/port.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/platform/port.o"
 arm-none-eabi-gcc "../Core/Inc/config_options.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/shared_data" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Inc/config_options.d" -MT"Core/Inc/config_options.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Inc/config_options.o"
-../Core/Inc/platform/deca_sleep.c: In function 'deca_usleep':
-../Core/Inc/platform/deca_sleep.c:26:5: warning: implicit declaration of function 'usleep'; did you mean 'Sleep'? [-Wimplicit-function-declaration]
-   26 |     usleep(time_us);
-      |     ^~~~~~
-      |     Sleep
-arm-none-eabi-gcc -o "dwm3000-tx.elf" @"objects.list"  -lC:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib -mcpu=cortex-m3 -T"C:\Users\HP\Documents\git\STM32\dwm3000-tx\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-tx.map" -Wl,--gc-sections -static -L"C:\Users\HP\Documents\git\STM32\dwm3000-tx\Core\Inc\dwt_uwb_driver\lib" -L"C:\Users\HP\Documents\git\STM32\dwm3000-tx\Core\Inc\dwt_uwb_driver\lib" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-c:\st\stm32cubeide_1.12.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: cannot find -lC:/Users/HP/Documents/git/STM32/dwm3000-tx/Core/Inc/dwt_uwb_driver/lib
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:67: dwm3000-tx.elf] Error 1
-"make -j16 all" terminated with exit code 2. Build might be incomplete.
+arm-none-eabi-gcc -o "dwm3000-tx.elf" @"objects.list"  -Wl,--start-group  -Wl,--end-group -mcpu=cortex-m3 -T"C:\Users\HP\Documents\git\STM32\dwm3000-tx\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-tx.map" -static -L"C:\Users\HP\Documents\git\STM32\dwm3000-tx\Core\Inc\dwt_uwb_driver\lib" -Wl,--whole-archive -ldwt_uwb_driver-m4-sfp-6.0.7 -Wl,--no-whole-archive --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dwm3000-tx.elf
+ 
+arm-none-eabi-size   dwm3000-tx.elf 
+arm-none-eabi-objdump -h -S  dwm3000-tx.elf  > "dwm3000-tx.list"
+   text	   data	    bss	    dec	    hex	filename
+ 137880	      8	   1984	 139872	  22260	dwm3000-tx.elf
+Finished building: default.size.stdout
+ 
+Finished building: dwm3000-tx.list
+ 
