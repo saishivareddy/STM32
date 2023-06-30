@@ -1,6 +1,0 @@
-deca_spi.c:37:5:openspi	1
-deca_spi.c:48:5:closespi	1
-deca_spi.c:60:5:writetospiwithcrc	2
-deca_spi.c:88:5:writetospi	3
-deca_spi.c:121:10:spi_cs_low_delay	3
-deca_spi.c:145:5:readfromspi	6
