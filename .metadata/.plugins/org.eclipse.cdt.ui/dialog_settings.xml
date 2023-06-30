@@ -3,7 +3,7 @@
 	<item key="LexicalSortingAction.sort" value="false"/>
 	<item key="LastUsedSourceTemplate" value="Default C source template"/>
 	<item key="LastUsedHeaderTemplate" value="Default C header template"/>
-	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="dwt_uwb_driver-m4-hfp-6.0.7"/>
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="-Wl,--whole-archive -ldwt_uwb_driver-m4-sfp-6.0.7 -Wl,--no-whole-archive"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">

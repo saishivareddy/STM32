@@ -12,6 +12,8 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm1000-twr-initiator/activeLau
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm1000-tx\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm1000-tx\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm300-f411-tx/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm300-f411-tx/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm3000-f411-tx\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:dwm1000-\ f411re\ Debug/activeLaunchMode=run

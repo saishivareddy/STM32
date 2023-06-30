@@ -1,14 +1,73 @@
-12:47:34 **** Incremental Build of configuration Debug for project dwm3000-f411-tx ****
+16:00:47 **** Incremental Build of configuration Debug for project dwm3000-f411-tx ****
 make -j16 all 
-arm-none-eabi-size   dwm3000-f411-tx.elf 
-   text	   data	    bss	    dec	    hex	filename
-  79272	    164	   1924	  81360	  13dd0	dwm3000-f411-tx.elf
-Finished building: default.size.stdout
- 
-12:47:35 **** Incremental Build of configuration Debug for project dwm3000-f411-tx ****
-make -j16 all 
-arm-none-eabi-size   dwm3000-f411-tx.elf 
-   text	   data	    bss	    dec	    hex	filename
-  79272	    164	   1924	  81360	  13dd0	dwm3000-f411-tx.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/simple_tx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver" -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/Inc" -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/lib" -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/platform" -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/shared_data" -I"C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/simple_tx.d" -MT"Core/Src/simple_tx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/simple_tx.o"
+In file included from C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_regs.h:19,
+                 from ../Core/Src/simple_tx.c:16:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_vals.h:109: warning: "SYS_STATUS_ALL_RX_TO" redefined
+  109 | #define SYS_STATUS_ALL_RX_TO   (SYS_STATUS_RXFTO_BIT_MASK | SYS_STATUS_RXPTO_BIT_MASK)
+      | 
+In file included from ../Core/Src/simple_tx.c:15:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/Inc/deca_device_api.h:287: note: this is the location of the previous definition
+  287 | #define SYS_STATUS_ALL_RX_TO (DWT_INT_RXFTO_BIT_MASK | DWT_INT_RXPTO_BIT_MASK | DWT_INT_CPERR_BIT_MASK)
+      | 
+In file included from C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_regs.h:19,
+                 from ../Core/Src/simple_tx.c:16:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_vals.h:112: warning: "SYS_STATUS_ALL_RX_ERR" redefined
+  112 | #define SYS_STATUS_ALL_RX_ERR  (SYS_STATUS_RXPHE_BIT_MASK | SYS_STATUS_RXFCE_BIT_MASK | SYS_STATUS_RXFSL_BIT_MASK | SYS_STATUS_RXSTO_BIT_MASK \
+      | 
+In file included from ../Core/Src/simple_tx.c:15:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/Inc/deca_device_api.h:290: note: this is the location of the previous definition
+  290 | #define SYS_STATUS_ALL_RX_ERR                                                                                                                                  \
+      | 
+In file included from C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_regs.h:19,
+                 from ../Core/Src/simple_tx.c:16:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_vals.h:116: warning: "SYS_STATUS_ALL_ND_RX_ERR" redefined
+  116 | #define SYS_STATUS_ALL_ND_RX_ERR  (SYS_STATUS_CIAERR_BIT_MASK | SYS_STATUS_RXSTO_BIT_MASK)
+      | 
+In file included from ../Core/Src/simple_tx.c:15:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/Inc/deca_device_api.h:299: note: this is the location of the previous definition
+  299 | #define SYS_STATUS_ALL_ND_RX_ERR     (DWT_INT_CIAERR_BIT_MASK | DWT_INT_RXSTO_BIT_MASK)
+      | 
+In file included from C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_regs.h:19,
+                 from ../Core/Src/simple_tx.c:16:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/decadriver/deca_vals.h:119: warning: "SYS_STATUS_ALL_RX_GOOD" redefined
+  119 | #define SYS_STATUS_ALL_RX_GOOD (SYS_STATUS_RXFR_BIT_MASK | SYS_STATUS_RXFCG_BIT_MASK | SYS_STATUS_RXPRD_BIT_MASK | \
+      | 
+In file included from ../Core/Src/simple_tx.c:15:
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Core/Inc/dwt_uwb_driver/Inc/deca_device_api.h:295: note: this is the location of the previous definition
+  295 | #define SYS_STATUS_ALL_RX_GOOD                                                                                                                                 \
+      | 
+../Core/Src/simple_tx.c:25:1: warning: data definition has no type or storage class
+   25 | LOG_MODULE_REGISTER(simple_tx);
+      | ^~~~~~~~~~~~~~~~~~~
+../Core/Src/simple_tx.c:25:1: warning: type defaults to 'int' in declaration of 'LOG_MODULE_REGISTER' [-Wimplicit-int]
+../Core/Src/simple_tx.c:25:1: warning: parameter names (without types) in function declaration
+../Core/Src/simple_tx.c: In function 'app_main':
+../Core/Src/simple_tx.c:115:13: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  115 |             sprintf(len, "len %d", FRAME_LENGTH-FCS_LEN);
+      |             ^~~~~~~
+../Core/Src/simple_tx.c:115:13: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/simple_tx.c:20:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   19 | #include "shared_defines.h"
+  +++ |+#include <stdio.h>
+   20 | 
+../Core/Src/simple_tx.c:135:18: warning: implicit declaration of function 'dwt_read32bitreg'; did you mean 'dwt_readctrdbg'? [-Wimplicit-function-declaration]
+  135 |         while (!(dwt_read32bitreg(SYS_STATUS_ID) & SYS_STATUS_TXFRS_BIT_MASK))
+      |                  ^~~~~~~~~~~~~~~~
+      |                  dwt_readctrdbg
+../Core/Src/simple_tx.c:139:9: warning: implicit declaration of function 'dwt_write32bitreg' [-Wimplicit-function-declaration]
+  139 |         dwt_write32bitreg(SYS_STATUS_ID, SYS_STATUS_TXFRS_BIT_MASK);
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/simple_tx.c:115:31: warning: '%d' directive writing 2 bytes into a region of size 1 [-Wformat-overflow=]
+  115 |             sprintf(len, "len %d", FRAME_LENGTH-FCS_LEN);
+      |                               ^~
+../Core/Src/simple_tx.c:115:13: note: 'sprintf' output 7 bytes into a destination of size 5
+  115 |             sprintf(len, "len %d", FRAME_LENGTH-FCS_LEN);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "dwm3000-f411-tx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-f411-tx\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-f411-tx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.12.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/simple_tx.o: in function `app_main':
+C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Debug/../Core/Src/simple_tx.c:135: undefined reference to `dwt_read32bitreg'
+c:\st\stm32cubeide_1.12.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.200.202301161003\tools\arm-none-eabi\bin\ld.exe: C:/Users/HP/Documents/git/STM32/DWM3000/dwm3000-f411-tx/Debug/../Core/Src/simple_tx.c:139: undefined reference to `dwt_write32bitreg'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: dwm3000-f411-tx.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.

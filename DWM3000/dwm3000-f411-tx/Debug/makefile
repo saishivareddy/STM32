@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (10.3-2021.10)
+# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
 -include ../makefile.init
@@ -15,6 +15,7 @@ RM := rm -rf
 -include Core/Inc/shared_data/subdir.mk
 -include Core/Inc/platform/subdir.mk
 -include Core/Inc/subdir.mk
+-include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -46,14 +47,14 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 EXECUTABLES += \
 dwm3000-f411-tx.elf \
 
-MAP_FILES += \
-dwm3000-f411-tx.map \
-
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
 dwm3000-f411-tx.list \
+
+OBJCOPY_BIN += \
+dwm3000-f411-tx.bin \
 
 
 # All Target
@@ -63,7 +64,7 @@ all: main-build
 main-build: dwm3000-f411-tx.elf secondary-outputs
 
 # Tool invocations
-dwm3000-f411-tx.elf dwm3000-f411-tx.map: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-f411-tx\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+dwm3000-f411-tx.elf: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-f411-tx\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	arm-none-eabi-gcc -o "dwm3000-f411-tx.elf" @"objects.list" $(USER_OBJS) -Wl,--start-group $(LIBS) -Wl,--end-group -mcpu=cortex-m4 -T"C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-f411-tx\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dwm3000-f411-tx.map" -Wl,--gc-sections -static -L"C:\Users\HP\Documents\git\STM32\DWM3000\dwm3000-f411-tx\Core\Inc\dwt_uwb_driver\lib" -Wl,--whole-archive -ldwt_uwb_driver-m4-hfp-6.0.7 -Wl,--no-whole-archive --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
@@ -78,12 +79,17 @@ dwm3000-f411-tx.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+dwm3000-f411-tx.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "dwm3000-f411-tx.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) default.size.stdout dwm3000-f411-tx.elf dwm3000-f411-tx.list dwm3000-f411-tx.map
+	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) dwm3000-f411-tx.elf
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
@@ -92,6 +98,6 @@ fail-specified-linker-script-missing:
 warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
-.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
+.PHONY: all clean dependents fail-specified-linker-script-missing warn-no-linker-script-specified
 
 -include ../makefile.targets
