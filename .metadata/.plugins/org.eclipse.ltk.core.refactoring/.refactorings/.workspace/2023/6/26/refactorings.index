@@ -3,3 +3,5 @@
 1687841927984	Delete resource 'DWM3000-f411RE-TX'
 1687842238855	Delete resource 'dwm1000-twr-initiator'
 1687850023181	Rename resource 'dwm300-f411-tx'
+1688116066604	Delete resource 'dwm3000-f411-tx/STM32F411RETX_FLASH.ld'
+1688116987041	Delete resource 'dwm3000-tx'

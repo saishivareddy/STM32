@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;DWM1000-twr-initiator/Core/Src/ex_05a_main.c&apos; to &apos;initiator.c&apos;" description="Rename resource &apos;ex_05a_main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/ex_05a_main.c" name="initiator.c" stamp="1688446984185" updateReferences="true"/>
+</session>

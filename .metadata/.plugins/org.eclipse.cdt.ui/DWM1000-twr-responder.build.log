@@ -1,0 +1,10 @@
+14:22:03 **** Incremental Build of configuration Debug for project DWM1000-twr-responder ****
+make -j16 all 
+arm-none-eabi-size   DWM1000-twr-responder.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18868	    108	   1920	  20896	   51a0	DWM1000-twr-responder.elf
+Finished building: default.size.stdout
+ 
+
+14:22:03 Build Finished. 0 errors, 0 warnings. (took 220ms)
+
