@@ -62,8 +62,8 @@ all: main-build
 main-build: DWM1000-twr-responder.elf secondary-outputs
 
 # Tool invocations
-DWM1000-twr-responder.elf DWM1000-twr-responder.map: $(OBJS) $(USER_OBJS) C:\Users\HP\Desktop\DWM1000-twr-responder\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "DWM1000-twr-responder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\HP\Desktop\DWM1000-twr-responder\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DWM1000-twr-responder.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+DWM1000-twr-responder.elf DWM1000-twr-responder.map: $(OBJS) $(USER_OBJS) C:\Users\HP\Documents\git\STM32\DWM1000-twr-responder\STM32F411RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "DWM1000-twr-responder.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\HP\Documents\git\STM32\DWM1000-twr-responder\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DWM1000-twr-responder.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
