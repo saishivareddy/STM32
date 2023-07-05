@@ -1,7 +1,7 @@
 /*
  * responder.c
  *
- *  Created on: Jul 4, 2023
+ *  Created on: 05-Jul-2023
  *      Author: HP
  */
 
@@ -14,7 +14,8 @@
  *           message (recording the RX time-stamp of the poll) expected from the "DS TWR initiator" example code (companion to this application), and
  *           then sends a "response" message recording its TX time-stamp, after which it waits for a "final" message from the initiator to complete
  *           the exchange. The final message contains the remote initiator's time-stamps of poll TX, response RX and final TX. With this data and the
- *           local time-stamps, (of poll RX, response TX and final RX), this example application works out a value for the time-of-flight over-the-air
+ *           local time-stamps, (of poll RX, response TX and final RX), this example application works out a value DW_WUP
+ *           for the time-of-flight over-the-air
  *           and, thus, the estimated distance between the two devices, which it writes to the LCD.
  *
  * @attention
@@ -25,7 +26,7 @@
  *
  * @author Decawave
  */
-//#ifdef EX_05B_DEF
+
 #include <stdio.h>
 #include <string.h>
 
@@ -34,7 +35,9 @@
 //#include "lcd.h"
 #include "deca_spi.h"
 #include "port.h"
+#include "ssd1306.h"
 #include "usart.h"
+
 /* Example application name and version to display on LCD screen. */
 uint8_t app_name[]= "DS TWR RESP v1.2";
 
@@ -110,7 +113,7 @@ static double tof;
 static double distance;
 
 /* String used to display measured distance on LCD screen (16 characters maximum). */
-uint8_t dist_str[16] = {0};
+char dist_str[16] = {0};
 
 /* Declaration of static functions. */
 static uint64 get_tx_timestamp_u64(void);
@@ -129,8 +132,8 @@ static void final_msg_get_ts(const uint8 *ts_field, uint32 *ts);
 int dw_main(void)
 {
     /* Display application name on LCD. */
-//    lcd_display_str(APP_NAME);
 	HAL_UART_Transmit(&huart2, app_name, sizeof(app_name), HAL_MAX_DELAY);
+
     /* Reset and initialise DW1000.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -181,7 +184,7 @@ int dw_main(void)
             {
                 dwt_readrxdata(rx_buffer, frame_len, 0);
             }
-            HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
+
             /* Check that the frame is a poll sent by "DS TWR initiator" example.
              * As the sequence number field of the frame is not relevant, it is cleared to simplify the validation of the frame. */
             rx_buffer[ALL_MSG_SN_IDX] = 0;
@@ -206,7 +209,7 @@ int dw_main(void)
                 dwt_writetxdata(sizeof(tx_resp_msg), tx_resp_msg, 0); /* Zero offset in TX buffer. */
                 dwt_writetxfctrl(sizeof(tx_resp_msg), 0, 1); /* Zero offset in TX buffer, ranging. */
                 ret = dwt_starttx(DWT_START_TX_DELAYED | DWT_RESPONSE_EXPECTED);
-                HAL_UART_Transmit(&huart2, tx_resp_msg, sizeof(tx_resp_msg), HAL_MAX_DELAY);
+
                 /* If dwt_starttx() returns an error, abandon this ranging exchange and proceed to the next one. See NOTE 11 below. */
                 if (ret == DWT_ERROR)
                 {
@@ -231,7 +234,7 @@ int dw_main(void)
                     {
                         dwt_readrxdata(rx_buffer, frame_len, 0);
                     }
-                    HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
+
                     /* Check that the frame is a final message sent by "DS TWR initiator" example.
                      * As the sequence number field of the frame is not used in this example, it can be zeroed to ease the validation of the frame. */
                     rx_buffer[ALL_MSG_SN_IDX] = 0;
@@ -266,8 +269,7 @@ int dw_main(void)
 
                         /* Display computed distance on LCD. */
                         sprintf(dist_str, "DIST: %3.2f m", distance);
-//                        lcd_display_str(dist_str);
-                        HAL_UART_Transmit(&huart2, dist_str, sizeof(dist_str), HAL_MAX_DELAY);
+                        lcd_display_str(dist_str);
                     }
                 }
                 else
@@ -359,7 +361,7 @@ static void final_msg_get_ts(const uint8 *ts_field, uint32 *ts)
         *ts += ts_field[i] << (i * 8);
     }
 }
-//#endif
+
 /*****************************************************************************************************************************************************
  * NOTES:
  *

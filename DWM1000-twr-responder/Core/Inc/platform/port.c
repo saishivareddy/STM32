@@ -102,15 +102,15 @@ int peripherals_init (void)
 
 /* @fn    spi_peripheral_init
  * */
-void spi_peripheral_init()
-{
-
-    /* SPI's has been initialized in the CubeMx code, see main.c */
-
-    port_LCD_RS_clear();
-
-    port_LCD_RW_clear();
-}
+//void spi_peripheral_init()
+//{
+//
+//    /* SPI's has been initialized in the CubeMx code, see main.c */
+//
+////    port_LCD_RS_clear();
+////
+////    port_LCD_RW_clear();
+//}
 
 
 
@@ -206,30 +206,30 @@ void setup_DW1000RSTnIRQ(int enable)
 /* @fn      port_is_boot1_low
  * @brief   check the BOOT1 pin status.
  * @return  1 if ON and 0 for OFF
- * */
-int port_is_boot1_low(void)
-{
-    return ((GPIO_ReadInputDataBit(TA_BOOT1_GPIO, TA_BOOT1))?(0):(1));
-}
+// * */
+//int port_is_boot1_low(void)
+//{
+//    return ((GPIO_ReadInputDataBit(TA_BOOT1_GPIO, TA_BOOT1))?(0):(1));
+//}
 
 /* @fn      port_is_boot1_low
  * @brief   check the BOOT1 pin status.
  * @return  1 if ON and 0 for OFF
  * */
-int port_is_boot1_on(uint16_t x)
-{
-    return ((GPIO_ReadInputDataBit(TA_BOOT1_GPIO, TA_BOOT1))?(0):(1));
-}
+//int port_is_boot1_on(uint16_t x)
+//{
+//    return ((GPIO_ReadInputDataBit(TA_BOOT1_GPIO, TA_BOOT1))?(0):(1));
+//}
 
 /* @fn      port_is_switch_on
  * @brief   check the switch status.
  *          when switch (S1) is 'on' the pin is low
  * @return  1 if ON and 0 for OFF
  * */
-int port_is_switch_on(uint16_t GPIOpin)
-{
-    return ((GPIO_ReadInputDataBit(TA_SW1_GPIO, GPIOpin))?(0):(1));
-}
+//int port_is_switch_on(uint16_t GPIOpin)
+//{
+//    return ((GPIO_ReadInputDataBit(TA_SW1_GPIO, GPIOpin))?(0):(1));
+//}
 
 
 /* @fn      led_off
@@ -609,39 +609,39 @@ __INLINE uint32_t port_CheckEXT_IRQ(void)
 //}
 //
 //
-///* DW1000 IRQ handler definition. */
-//port_deca_isr_t port_deca_isr = NULL;
-//
-///*! ------------------------------------------------------------------------------------------------------------------
-// * @fn port_set_deca_isr()
-// *
-// * @brief This function is used to install the handling function for DW1000 IRQ.
-// *
-// * NOTE:
-// *   - As EXTI9_5_IRQHandler does not check that port_deca_isr is not null, the user application must ensure that a
-// *     proper handler is set by calling this function before any DW1000 IRQ occurs!
-// *   - This function makes sure the DW1000 IRQ line is deactivated while the handler is installed.
-// *
-// * @param deca_isr function pointer to DW1000 interrupt handler to install
-// *
-// * @return none
-// */
-//void port_set_deca_isr(port_deca_isr_t deca_isr)
-//{
-//    /* Check DW1000 IRQ activation status. */
-//    ITStatus en = port_GetEXT_IRQStatus();
-//
-//    /* If needed, deactivate DW1000 IRQ during the installation of the new handler. */
-//    if (en)
-//    {
-//        port_DisableEXT_IRQ();
-//    }
-//    port_deca_isr = deca_isr;
-//    if (en)
-//    {
-//        port_EnableEXT_IRQ();
-//    }
-//}
+/* DW1000 IRQ handler definition. */
+port_deca_isr_t port_deca_isr = NULL;
+
+/*! ------------------------------------------------------------------------------------------------------------------
+ * @fn port_set_deca_isr()
+ *
+ * @brief This function is used to install the handling function for DW1000 IRQ.
+ *
+ * NOTE:
+ *   - As EXTI9_5_IRQHandler does not check that port_deca_isr is not null, the user application must ensure that a
+ *     proper handler is set by calling this function before any DW1000 IRQ occurs!
+ *   - This function makes sure the DW1000 IRQ line is deactivated while the handler is installed.
+ *
+ * @param deca_isr function pointer to DW1000 interrupt handler to install
+ *
+ * @return none
+ */
+void port_set_deca_isr(port_deca_isr_t deca_isr)
+{
+    /* Check DW1000 IRQ activation status. */
+    ITStatus en = port_GetEXT_IRQStatus();
+
+    /* If needed, deactivate DW1000 IRQ during the installation of the new handler. */
+    if (en)
+    {
+        port_DisableEXT_IRQ();
+    }
+    port_deca_isr = deca_isr;
+    if (en)
+    {
+        port_EnableEXT_IRQ();
+    }
+}
 
 
 /****************************************************************************//**

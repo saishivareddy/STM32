@@ -30,7 +30,7 @@ extern "C" {
 typedef void (*port_deca_isr_t)(void);
 
 /* DW1000 IRQ handler declaration. */
-//port_deca_isr_t port_deca_isr;
+port_deca_isr_t port_deca_isr;
 
 /*! ------------------------------------------------------------------------------------------------------------------
  * @fn port_set_deca_isr()
@@ -47,21 +47,21 @@ typedef void (*port_deca_isr_t)(void);
  * @return none
  */
 void port_set_deca_isr(port_deca_isr_t deca_isr);
-
-#define BUFFLEN     (64) //(4096+128)
-
-#define BUF_SIZE    (64)
-
-#define USB_SUPPORT
-
-typedef struct
-{
-    uint16_t        usblen;                 /**< for RX from USB */
-    uint8_t         usbbuf[BUF_SIZE*3];     /**< for RX from USB */
-}__packed app_t;
-
-
-extern app_t    app;
+//
+//#define BUFFLEN     (64) //(4096+128)
+//
+//#define BUF_SIZE    (64)
+//
+//#define USB_SUPPORT
+//
+//typedef struct
+//{
+//    uint16_t        usblen;                 /**< for RX from USB */
+//    uint8_t         usbbuf[BUF_SIZE*3];     /**< for RX from USB */
+//}__packed app_t;
+//
+//
+//extern app_t    app;
 
 
 /*****************************************************************************************************************//*
@@ -114,26 +114,26 @@ typedef enum
 
 
 
-#define DW1000_RSTn                 DW_RESET_Pin
-#define DW1000_RSTn_GPIO            DW_RESET_GPIO_Port
+#define DW1000_RSTn                 DW_RST_Pin
+#define DW1000_RSTn_GPIO            DW_RST_GPIO_Port
 
 
-#define DECAIRQ                     DW_IRQn_Pin
-#define DECAIRQ_GPIO                DW_IRQn_GPIO_Port
+#define DECAIRQ                     DW_IRQ_Pin
+#define DECAIRQ_GPIO                DW_IRQ_GPIO_Port
 
-#define TA_BOOT1                    GPIO_PIN_2
-#define TA_BOOT1_GPIO               GPIOB
+//#define TA_BOOT1                    GPIO_PIN_2
+//#define TA_BOOT1_GPIO               GPIOB
+//
+//#define TA_RESP_DLY                 GPIO_PIN_0
+//#define TA_RESP_DLY_GPIO            GPIOC
 
-#define TA_RESP_DLY                 GPIO_PIN_0
-#define TA_RESP_DLY_GPIO            GPIOC
-
-#define TA_SW1_3                    GPIO_PIN_0
-#define TA_SW1_4                    GPIO_PIN_1
-#define TA_SW1_5                    GPIO_PIN_2
-#define TA_SW1_6                    GPIO_PIN_3
-#define TA_SW1_7                    GPIO_PIN_4
-#define TA_SW1_8                    GPIO_PIN_5
-#define TA_SW1_GPIO                 GPIOC
+//#define TA_SW1_3                    GPIO_PIN_0
+//#define TA_SW1_4                    GPIO_PIN_1
+//#define TA_SW1_5                    GPIO_PIN_2
+//#define TA_SW1_6                    GPIO_PIN_3
+//#define TA_SW1_7                    GPIO_PIN_4
+//#define TA_SW1_8                    GPIO_PIN_5
+//#define TA_SW1_GPIO                 GPIOC
 
 /****************************************************************************//**
  *
@@ -190,10 +190,10 @@ void setup_DW1000RSTnIRQ(int enable);
 void reset_DW1000(void);
 
 
-void port_LCD_RS_set(void);
-void port_LCD_RS_clear(void);
-void port_LCD_RW_set(void);
-void port_LCD_RW_clear(void);
+//void port_LCD_RS_set(void);
+//void port_LCD_RS_clear(void);
+//void port_LCD_RW_set(void);
+//void port_LCD_RW_clear(void);
 
 ITStatus EXTI_GetITEnStatus(uint32_t x);
 
