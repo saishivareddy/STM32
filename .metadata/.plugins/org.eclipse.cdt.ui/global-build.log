@@ -1,14 +1,14 @@
-14:21:54 **** Incremental Build of configuration Debug for project DWM1000-twr-responder ****
+11:18:26 **** Incremental Build of configuration Debug for project DWM1000-twr-responder ****
 make -j16 all 
-arm-none-eabi-size   DWM1000-twr-responder.elf 
-   text	   data	    bss	    dec	    hex	filename
-  18868	    108	   1920	  20896	   51a0	DWM1000-twr-responder.elf
-Finished building: default.size.stdout
- 
-14:22:03 **** Incremental Build of configuration Debug for project DWM1000-twr-responder ****
-make -j16 all 
-arm-none-eabi-size   DWM1000-twr-responder.elf 
-   text	   data	    bss	    dec	    hex	filename
-  18868	    108	   1920	  20896	   51a0	DWM1000-twr-responder.elf
-Finished building: default.size.stdout
- 
+arm-none-eabi-gcc "../Core/Src/responder.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/HP/Desktop/DWM1000-twr-responder/Core/Inc/decadriver" -I"C:/Users/HP/Desktop/DWM1000-twr-responder/Core/Inc/platform" -I"C:/Users/HP/Desktop/DWM1000-twr-responder/Core/Inc/compiler" -I"C:/Users/HP/Desktop/DWM1000-twr-responder/Core/Inc/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/responder.d" -MT"Core/Src/responder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/responder.o"
+../Core/Src/responder.c: In function 'dw_main':
+../Core/Src/responder.c:143:9: warning: implicit declaration of function 'lcd_display_str' [-Wimplicit-function-declaration]
+  143 |         lcd_display_str("INIT FAILED");
+      |         ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "DWM1000-twr-responder.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\HP\Desktop\DWM1000-twr-responder\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DWM1000-twr-responder.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/responder.o: in function `dw_main':
+C:/Users/HP/Desktop/DWM1000-twr-responder/Debug/../Core/Src/responder.c:143: undefined reference to `lcd_display_str'
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: C:/Users/HP/Desktop/DWM1000-twr-responder/Debug/../Core/Src/responder.c:270: undefined reference to `lcd_display_str'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: DWM1000-twr-responder.elf] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.

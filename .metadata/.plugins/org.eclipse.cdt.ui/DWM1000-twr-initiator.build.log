@@ -1,10 +1,10 @@
-12:32:27 **** Incremental Build of configuration Debug for project DWM1000-twr-initiator ****
+11:11:56 **** Incremental Build of configuration Debug for project DWM1000-twr-initiator ****
 make -j16 all 
 arm-none-eabi-size   DWM1000-twr-initiator.elf 
    text	   data	    bss	    dec	    hex	filename
-  18868	    108	   1920	  20896	   51a0	DWM1000-twr-initiator.elf
+  24464	    116	   2960	  27540	   6b94	DWM1000-twr-initiator.elf
 Finished building: default.size.stdout
  
 
-12:32:28 Build Finished. 0 errors, 0 warnings. (took 223ms)
+11:11:56 Build Finished. 0 errors, 0 warnings. (took 219ms)
 

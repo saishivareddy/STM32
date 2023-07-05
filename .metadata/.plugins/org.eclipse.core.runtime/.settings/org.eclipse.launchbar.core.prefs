@@ -2,12 +2,12 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-initiator Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-responder
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-initiator Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-initiator\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-initiator\ Debug/activeLaunchTarget=null\:---
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-responder/activeLaunchMode=debug
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F411-RX-TX\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DWM1000-twr-responder/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F411-RX-TX\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:F411-RX-TX\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm1000-\ f411re\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm1000-\ f411re-rx/activeLaunchMode=debug
@@ -21,5 +21,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm300-f411-tx/activeLaunchTarg
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:dwm3000-f411-tx\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:uart\ Debug/activeLaunchTarget=null\:---
+org.eclipse.launchbar.core.descriptorType.default\:DWM1000-twr-initiator\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:DWM1000-twr-initiator\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:dwm1000-\ f411re\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:dwm1000-\ f411re\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
