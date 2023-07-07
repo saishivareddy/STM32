@@ -51,6 +51,8 @@
 		<item key="caseSensitive" value="false"/>
 		<item key="searchFlags" value="227191"/>
 		<list key="previousPatterns">
+			<item value="dwt_setcallbacks"/>
+			<item value="dwt_isr"/>
 			<item value="DW_WUP"/>
 			<item value="dw_wkp"/>
 			<item value="sleep"/>

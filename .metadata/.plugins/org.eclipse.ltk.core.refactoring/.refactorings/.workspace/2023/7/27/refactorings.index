@@ -15,3 +15,7 @@
 1688535874903	Delete resource 'DWM1000-twr-initiator'
 1688535902030	Rename resource 'DWM1000-twr-initiator'
 1688535914189	Delete resource 'DWM1000-twr-responder/Core/Src/initiator.c'
+1688537066336	Delete resource 'DWM1000-twr-responder/DWM1000-twr-initiator Debug.launch'
+1688702787740	Delete resource 'DWM1000-twr-initiator/Core/Inc/platform/lcd.h'
+1688702791849	Delete resource 'DWM1000-twr-initiator/Core/Inc/platform/lcd.c'
+1688705237329	Delete resource 'SmartBin-v0.1'

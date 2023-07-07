@@ -125,7 +125,7 @@ int dw_main(void)
     {
 //        lcd_display_str("INIT FAILED");
     	HAL_UART_Transmit(&huart2, "Init Failed!!!", 15, HAL_MAX_DELAY);
-    	SSD1306_GotoXY(0, 10);
+    	SSD1306_GotoXY(0, 10); SSD1306_InvertDisplay(1);
     	ssd1306_write("INIT FAILED!!!", Font_7x10);
         while (1)
         { };
@@ -149,8 +149,7 @@ int dw_main(void)
     while (1)
     {
     	SSD1306_Clear ();
-    	SSD1306_GotoXY(0, 0);  ssd1306_write("Transmitted :", Font_7x10);
-    	SSD1306_GotoXY(0, 20);  ssd1306_write("Received :", Font_7x10);
+
         /* Write frame data to DW1000 and prepare transmission. See NOTE 8 below. */
         tx_poll_msg[ALL_MSG_SN_IDX] = frame_seq_nb;
         dwt_writetxdata(sizeof(tx_poll_msg), tx_poll_msg, 0); /* Zero offset in TX buffer. */
@@ -159,7 +158,9 @@ int dw_main(void)
         /* Start transmission, indicating that a response is expected so that reception is enabled automatically after the frame is sent and the delay
          * set by dwt_setrxaftertxdelay() has elapsed. */
         dwt_starttx(DWT_START_TX_IMMEDIATE | DWT_RESPONSE_EXPECTED);
-        SSD1306_GotoXY(0, 10); ssd1306_write(tx_poll_msg, Font_7x10);
+        SSD1306_GotoXY(0, 0);  ssd1306_write("Transmitted :", Font_7x10);
+
+        SSD1306_GotoXY(0, 20); ssd1306_write(tx_poll_msg, Font_7x10);
         HAL_UART_Transmit(&huart2, tx_poll_msg, sizeof(tx_poll_msg), HAL_MAX_DELAY);
         /* We assume that the transmission is achieved correctly, poll for reception of a frame or error/timeout. See NOTE 9 below. */
         while (!((status_reg = dwt_read32bitreg(SYS_STATUS_ID)) & (SYS_STATUS_RXFCG | SYS_STATUS_ALL_RX_TO | SYS_STATUS_ALL_RX_ERR)))
@@ -182,7 +183,8 @@ int dw_main(void)
                 dwt_readrxdata(rx_buffer, frame_len, 0);
             }
             HAL_UART_Transmit(&huart2, rx_buffer, sizeof(rx_buffer), HAL_MAX_DELAY);
-            SSD1306_GotoXY(0, 30); ssd1306_write(rx_buffer, Font_7x10);
+            SSD1306_GotoXY(0, 0);  ssd1306_write("Received :", Font_7x10);
+            SSD1306_GotoXY(0, 20); ssd1306_write(rx_buffer, Font_7x10);
             /* Check that the frame is the expected response from the companion "DS TWR responder" example.
              * As the sequence number field of the frame is not relevant, it is cleared to simplify the validation of the frame. */
             rx_buffer[ALL_MSG_SN_IDX] = 0;
@@ -212,6 +214,8 @@ int dw_main(void)
                 dwt_writetxdata(sizeof(tx_final_msg), tx_final_msg, 0); /* Zero offset in TX buffer. */
                 dwt_writetxfctrl(sizeof(tx_final_msg), 0, 1); /* Zero offset in TX buffer, ranging. */
                 ret = dwt_starttx(DWT_START_TX_DELAYED);
+                SSD1306_GotoXY(0, 0);  ssd1306_write("Transmitted :", Font_7x10);
+
                 HAL_UART_Transmit(&huart2, tx_final_msg, sizeof(tx_final_msg), HAL_MAX_DELAY);
                 SSD1306_GotoXY(0, 20); ssd1306_write(tx_final_msg, Font_7x10);
                 /* If dwt_starttx() returns an error, abandon this ranging exchange and proceed to the next one. See NOTE 12 below. */

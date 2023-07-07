@@ -1,9 +1,12 @@
-15:13:55 **** Incremental Build of configuration Debug for project SmartBin-v0.1 ****
+10:17:06 **** Incremental Build of configuration Debug for project SmartBin-v0.1 ****
 make all 
-Cannot run program "make": Launching failed
+arm-none-eabi-size   SmartBin-v0.1.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 178256	   2308	  18216	 198780	  3087c	SmartBin-v0.1.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objcopy -O ihex "SmartBin-v0.1.elf" "SmartBin-v0.1.hex"
+ 
 
-Error: Program "make" not found in PATH
-PATH=[C:/ST/STM32CubeIDE_1.12.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_2.4.101.202303251752/jre/bin/server;C:/ST/STM32CubeIDE_1.12.1/STM32CubeIDE//plugins/com.st.stm32cube.ide.jre.win64_2.4.101.202303251752/jre/bin;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\PuTTY\;C:\Program Files\Git\cmd;C:\Users\HP\AppData\Local\Microsoft\WindowsApps;C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE]
-
-15:13:56 Build Failed. 1 errors, 0 warnings. (took 252ms)
+10:17:07 Build Finished. 0 errors, 0 warnings. (took 1s.240ms)
 
