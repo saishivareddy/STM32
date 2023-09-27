@@ -1,9 +1,4 @@
-10:17:06 **** Incremental Build of configuration Debug for project SmartBin-v0.1 ****
-make all 
-arm-none-eabi-size   SmartBin-v0.1.elf 
-   text	   data	    bss	    dec	    hex	filename
- 178256	   2308	  18216	 198780	  3087c	SmartBin-v0.1.elf
-Finished building: default.size.stdout
- 
-arm-none-eabi-objcopy -O ihex "SmartBin-v0.1.elf" "SmartBin-v0.1.hex"
- 
+10:46:10 **** Incremental Build of configuration Debug for project DWM1004S ****
+make -j16 all 
+startup/subdir.mk:19: *** unable to generate command line.  Stop.
+"make -j16 all" terminated with exit code 2. Build might be incomplete.

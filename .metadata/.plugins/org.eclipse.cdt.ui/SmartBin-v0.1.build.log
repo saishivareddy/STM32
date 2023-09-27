@@ -1,12 +1,15 @@
-10:17:06 **** Incremental Build of configuration Debug for project SmartBin-v0.1 ****
+10:54:27 **** Build of configuration Debug for project SmartBin-v0.1 ****
 make all 
-arm-none-eabi-size   SmartBin-v0.1.elf 
-   text	   data	    bss	    dec	    hex	filename
- 178256	   2308	  18216	 198780	  3087c	SmartBin-v0.1.elf
-Finished building: default.size.stdout
- 
-arm-none-eabi-objcopy -O ihex "SmartBin-v0.1.elf" "SmartBin-v0.1.hex"
- 
+make[1]: Circular Src/tasks/cron_parse.o <- Src/tasks/cron_parse.o dependency dropped.
+make[1]: Circular Src/tasks/cron_parse.o <- Src/tasks/cron_parse.o dependency dropped.
+Building file: 
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc "" -mcpu=cortex-m0plus -std=gnu11 -g3 -c -I"D:\STM32CubeIDE\SmartBin-v0.1\Inc\kernel" -I"D:\STM32CubeIDE\SmartBin-v0.1\Inc" -O0 -ffunction-sections -fdata-sections -Wall -fcommon -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/tasks/cron_parse.d" -MT"Src/tasks/cron_parse.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/tasks/cron_parse.o"
+arm-none-eabi-gcc: warning: : linker input file unused because linking not done
+arm-none-eabi-gcc: error: : linker input file not found: No such file or directory
+make[1]: *** [Src/tasks/subdir.mk:44: Src/tasks/cron_parse.o] Error 1
+make: *** [makefile:76: all] Error 2
+"make all" terminated with exit code 2. Build might be incomplete.
 
-10:17:07 Build Finished. 0 errors, 0 warnings. (took 1s.240ms)
+10:54:30 Build Failed. 2 errors, 2 warnings. (took 2s.355ms)
 

@@ -1,4 +1,4 @@
-deca_spi.c:33:5:openspi	1
-deca_spi.c:44:5:closespi	1
-deca_spi.c:57:5:writetospi	2
-deca_spi.c:89:5:readfromspi	8
+../Core/Inc/platform/deca_spi.c:33:5:openspi	1
+../Core/Inc/platform/deca_spi.c:44:5:closespi	1
+../Core/Inc/platform/deca_spi.c:57:5:writetospi	2
+../Core/Inc/platform/deca_spi.c:89:5:readfromspi	8

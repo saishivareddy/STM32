@@ -53,21 +53,21 @@ portGetTickCnt(void)
  * @brief precise usleep() delay
  * */
 #pragma GCC optimize ("O0")
-int usleep(useconds_t usec)
-{
-    int i,j;
-#pragma GCC ivdep
-    for(i=0;i<usec;i++)
-    {
-#pragma GCC ivdep
-        for(j=0;j<2;j++)
-        {
-            __NOP();
-            __NOP();
-        }
-    }
-    return 0;
-}
+//int usleep(useconds_t usec)
+//{
+//    int i,j;
+//#pragma GCC ivdep
+//    for(i=0;i<usec;i++)
+//    {
+//#pragma GCC ivdep
+//        for(j=0;j<2;j++)
+//        {
+//            __NOP();
+//            __NOP();
+//        }
+//    }
+//    return 0;
+//}
 
 
 /* @fn    Sleep
@@ -157,7 +157,7 @@ void reset_DW1000(void)
     //drive the RSTn pin low
     HAL_GPIO_WritePin(DW_RST_GPIO_Port, DW_RST_Pin, GPIO_PIN_RESET);
 
-    usleep(1);
+    Sleep(1);
 
     //put the pin back to output open-drain (not active)
     setup_DW1000RSTnIRQ(0);

@@ -60,8 +60,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define DW_RST_Pin GPIO_PIN_0
 #define DW_RST_GPIO_Port GPIOA
-#define DW_IRQ_Pin GPIO_PIN_1
-#define DW_IRQ_GPIO_Port GPIOA
+#define DW_IRQ_Pin GPIO_PIN_5
+#define DW_IRQ_GPIO_Port GPIOB
 #define DW_CS_Pin GPIO_PIN_6
 #define DW_CS_GPIO_Port GPIOB
 

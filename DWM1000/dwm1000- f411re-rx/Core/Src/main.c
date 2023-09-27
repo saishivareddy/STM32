@@ -24,6 +24,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "ssd1306.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -94,7 +95,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   setup_DW1000RSTnIRQ(0);
   SSD1306_Init();
-    dw_main();
+  dw_main();
   /* USER CODE END 2 */
 
   /* Infinite loop */

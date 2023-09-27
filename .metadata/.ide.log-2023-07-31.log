@@ -1,0 +1,155 @@
+2023-08-01 09:49:53,183 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 422447800 Bytes (1050673152)
+2023-08-01 09:49:53,943 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 496370360 Bytes (1050673152)
+2023-08-01 09:49:54,272 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 600705720 Bytes (1050673152)
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: PWR
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RTC
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: MEMORYMAP
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPBAM
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-08-01 09:49:57,418 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: LPBAMQUEUE
+2023-08-01 09:49:57,419 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.12.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.0.202307051724\\db\
+2023-08-01 09:49:57,424 [WARN] IP:2114 - pwrPrivilegeSecure not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,424 [WARN] IP:2114 - pwrPrivilegeNSecure not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,424 [WARN] IP:2114 - PWR_WKUP1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP4 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP5 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP6 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP7 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_WKUP8 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_VDM not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_APC not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_LPM not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,425 [WARN] IP:2114 - PWR_VB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,468 [WARN] IP:2114 - rccPrivilegeSecure not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,468 [WARN] IP:2114 - rccSecurity not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - OutPut1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - OutPut2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - OutPut3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - rtcSecureFull not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - rtcNonSecureFeatures not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_NONE not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_INIT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRA not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_TS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_CAL not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_WUT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - Sec_BKP_Registers1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - backupRegisterStartZone2_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,480 [WARN] IP:2114 - backupRegisterStartZone3_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - OutPut1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - OutPut2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - OutPut3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,481 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - rtcSecureFull not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - rtcNonSecureFeatures not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_NONE not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_INIT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRA not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_TS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_CAL not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_WUT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - Sec_BKP_Registers1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - backupRegisterStartZone2_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,482 [WARN] IP:2114 - backupRegisterStartZone3_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,483 [WARN] IP:2114 - BinaryAutoClr_A not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,483 [WARN] IP:2114 - FlagAutoClr_A not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,484 [WARN] IP:2114 - BinaryAutoClr_B not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,484 [WARN] IP:2114 - FlagAutoClr_B not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,484 [WARN] IP:2114 - OutPut1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,484 [WARN] IP:2114 - OutPut2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,484 [WARN] IP:2114 - OutPut3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - rtcSecureFull not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - rtcNonSecureFeatures not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_NONE not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_INIT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRA not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_TS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_CAL not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_WUT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - Sec_BKP_Registers1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - backupRegisterStartZone2_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,485 [WARN] IP:2114 - backupRegisterStartZone3_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:57,574 [INFO] IP:3366 - RTE template : freertos_start.ftl
+2023-08-01 09:49:57,724 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\license.tmp_save
+2023-08-01 09:49:57,818 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\license.tmp
+2023-08-01 09:49:58,027 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\gpio.tmp_save
+2023-08-01 09:49:58,134 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\gpio.tmp
+2023-08-01 09:49:58,144 [WARN] IPConfigManager:99 - WARNING: Missing Config File for MEMORYMAP ip!!
+2023-08-01 09:49:58,144 [WARN] IP:2114 - DefaultDataRegion not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - OutPut1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - OutPut2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - OutPut3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - rtcSecureFull not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - rtcNonSecureFeatures not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_NONE not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_INIT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRA not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,432 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_TS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_CAL not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_WUT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - Sec_BKP_Registers1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - backupRegisterStartZone2_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - backupRegisterStartZone3_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - OutPut1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - OutPut2 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - OutPut3 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - BinMixBcdU not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,433 [WARN] IP:2114 - SSRU_Underflow_Interrupt not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - rtcSecureFull not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - rtcNonSecureFeatures not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_NONE not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_INIT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRA not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_ALRB not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_TS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_CAL not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - RTC_NONSECURE_FEATURE_WUT not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - Sec_BKP_Registers1 not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - backupRegisterStartZone2_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - backupRegisterStartZone3_gS not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - BinaryAutoClr_A not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,434 [WARN] IP:2114 - FlagAutoClr_A not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,435 [WARN] IP:2114 - BinaryAutoClr_B not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,435 [WARN] IP:2114 - FlagAutoClr_B not found: check if there is a RefParameter without a condition.
+2023-08-01 09:49:58,526 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\cortex.tmp_save
+2023-08-01 09:49:58,590 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\cortex.tmp
+2023-08-01 09:49:58,648 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\stm32u5xx_it.c_save
+2023-08-01 09:49:58,832 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\stm32u5xx_it.c
+2023-08-01 09:49:58,848 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\stm32u5xx_it.h_save
+2023-08-01 09:49:58,911 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\stm32u5xx_it.h
+2023-08-01 09:49:58,990 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\stm32u5xx_hal_msp.c_save
+2023-08-01 09:49:59,104 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\stm32u5xx_hal_msp.c
+2023-08-01 09:49:59,123 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\system.tmp_save
+2023-08-01 09:49:59,236 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\MXTmpFiles\system.tmp
+2023-08-01 09:49:59,287 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\stm32u5xx_hal_conf.h_save
+2023-08-01 09:49:59,369 [INFO] CodeEngine:335 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\stm32u5xx_hal_conf.h
+2023-08-01 09:49:59,811 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\main.h_save
+2023-08-01 09:49:59,963 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Inc\main.h
+2023-08-01 09:50:00,021 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\main.c_save
+2023-08-01 09:50:00,230 [INFO] CodeEngine:279 - Generated code: C:\Users\HP\Documents\git\STM32\rtos-demo\Core\Src\main.c
+2023-08-01 09:50:03,429 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 1795mS.
+2023-08-01 09:50:03,431 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-08-01 09:50:03,601 [INFO] ConfigFileManager:1457 - The Die is : DIE481
+2023-08-01 09:50:06,192 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 2761mS.
+2023-08-01 09:50:06,192 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-08-01 09:50:06,194 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

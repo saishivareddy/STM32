@@ -110,7 +110,7 @@ int dw_main(void)
             }
             SSD1306_GotoXY(0, 30);
             ssd1306_write(rx_buffer, Font_7x10);
-            HAL_UART_Transmit(&huart2, rx_buffer, 10, HAL_MAX_DELAY);
+            HAL_UART_Transmit(&huart2, rx_buffer, strlen(rx_buffer), HAL_MAX_DELAY);
             /* Clear good RX frame event in the DW1000 status register. */
             dwt_write32bitreg(SYS_STATUS_ID, SYS_STATUS_RXFCG);
 

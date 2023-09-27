@@ -1,0 +1,10 @@
+15:54:41 **** Incremental Build of configuration Debug for project dwm1000-tx ****
+make -j16 all 
+arm-none-eabi-size   dwm1000-tx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36960	    524	   2124	  39608	   9ab8	dwm1000-tx.elf
+Finished building: default.size.stdout
+ 
+
+15:54:41 Build Finished. 0 errors, 0 warnings. (took 244ms)
+

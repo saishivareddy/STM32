@@ -17,7 +17,7 @@
 #include "port.h"
 #include "stdio.h"
 #include "usart.h"
-
+#include "string.h"
 #include "main.h"
 
 #include "ssd1306.h"
@@ -43,9 +43,9 @@ static dwt_config_t config = {
  *     - byte 1: sequence number, incremented for each new frame.
  *     - byte 2 -> 9: device ID, see NOTE 1 below.
  *     - byte 10/11: frame check-sum, automatically set by DW1000.  */
-static uint8 tx_msg[] = {"0Hyderabad\n"};
+static uint8 tx_msg[] = {0xC5, 0, 'D', 'E', 'C', 'A', 'W', 'A', 'V', 'E', 0, 0};
 /* Index to access to sequence number of the blink frame in the tx_msg array. */
-#define BLINK_FRAME_SN_IDX 0
+#define BLINK_FRAME_SN_IDX 1
 
 /* Inter-frame delay period, in milliseconds. */
 #define TX_DELAY_MS 1000
@@ -58,6 +58,8 @@ int dw_main(void)
     /* Display application name on LCD. */
 //dwt
 	ssd1306_write(buff, Font_7x10);
+//	FILE *fp;
+
     /* Reset and initialise DW1000. See NOTE 2 below.
      * For initialisation, DW1000 clocks must be temporarily set to crystal speed. After initialisation SPI rate can be increased for optimum
      * performance. */
@@ -81,13 +83,15 @@ int dw_main(void)
     {
     	SSD1306_GotoXY(0, 10);
     	ssd1306_write("Transmitted : ", Font_7x10);
+
+
         /* Write frame data to DW1000 and prepare transmission. See NOTE 4 below.*/
         dwt_writetxdata(sizeof(tx_msg), tx_msg, 0); /* Zero offset in TX buffer. */
         dwt_writetxfctrl(sizeof(tx_msg), 0, 0); /* Zero offset in TX buffer, no ranging. */
 
         /* Start transmission. */
         dwt_starttx(DWT_START_TX_IMMEDIATE);
-
+        HAL_UART_Transmit(&huart2, tx_msg, sizeof(tx_msg), HAL_MAX_DELAY);
         SSD1306_GotoXY(0,  30);
         ssd1306_write(tx_msg, Font_7x10);
         /* Poll DW1000 until TX frame sent event set. See NOTE 5 below.
@@ -101,7 +105,7 @@ int dw_main(void)
 
         /* Execute a delay between transmissions. */
         Sleep(TX_DELAY_MS);
-        HAL_UART_Transmit(&huart2, tx_msg, sizeof(tx_msg), HAL_MAX_DELAY);
+
 
         /* Increment the blink frame sequence number (modulo 256). */
         tx_msg[BLINK_FRAME_SN_IDX]++;

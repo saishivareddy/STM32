@@ -1,0 +1,7 @@
+10:46:10 **** Incremental Build of configuration Debug for project DWM1004S ****
+make -j16 all 
+startup/subdir.mk:19: *** unable to generate command line.  Stop.
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+
+10:46:10 Build Failed. 1 errors, 0 warnings. (took 202ms)
+

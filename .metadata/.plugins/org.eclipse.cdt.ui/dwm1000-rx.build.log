@@ -1,0 +1,10 @@
+11:55:50 **** Incremental Build of configuration Debug for project dwm1000-rx ****
+make -j16 all 
+arm-none-eabi-size   dwm1000-rx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37120	    508	   2260	  39888	   9bd0	dwm1000-rx.elf
+Finished building: default.size.stdout
+ 
+
+11:55:51 Build Finished. 0 errors, 0 warnings. (took 272ms)
+

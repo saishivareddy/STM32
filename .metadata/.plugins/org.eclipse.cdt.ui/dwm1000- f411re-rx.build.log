@@ -1,10 +1,10 @@
-14:12:44 **** Incremental Build of configuration Debug for project dwm1000- f411re-rx ****
+14:10:32 **** Incremental Build of configuration Debug for project dwm1000- f411re-rx ****
 make -j16 all 
 arm-none-eabi-size   dwm1000-\ f411re-rx.elf 
    text	   data	    bss	    dec	    hex	filename
-  28268	    160	   3056	  31484	   7afc	dwm1000- f411re-rx.elf
+  27848	    152	   3368	  31368	   7a88	dwm1000- f411re-rx.elf
 Finished building: default.size.stdout
  
 
-14:12:44 Build Finished. 0 errors, 0 warnings. (took 901ms)
+14:10:32 Build Finished. 0 errors, 0 warnings. (took 238ms)
 

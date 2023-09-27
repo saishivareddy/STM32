@@ -9,6 +9,9 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\HP\Documents\git\STM32\DWM1000\dwm1000- f411re"/>
+			<item value="C:\Users\HP\Documents\git\STM32\DWM1000\dwm1000- f411re-rx"/>
+			<item value="D:\Garb0\Node 1\SmartBin-v0.1"/>
 			<item value="C:\Users\HP\Desktop\DWM1000-twr-responder"/>
 			<item value="C:\Users\HP\Documents\git\STM32\uart"/>
 			<item value="C:\Users\HP\Documents\git\STM32\dwm3000"/>

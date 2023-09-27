@@ -1,4 +1,0 @@
-responder.c:132:5:dw_main	11
-responder.c:321:15:get_tx_timestamp_u64	2
-responder.c:345:15:get_rx_timestamp_u64	2
-responder.c:370:13:final_msg_get_ts	2
